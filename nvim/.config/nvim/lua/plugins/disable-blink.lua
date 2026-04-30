@@ -1,4 +1,8 @@
 return {
   "Saghen/blink.cmp",
-  ghost_text = { enabled = false },
+  opts = {
+    completion = {
+      ghost_text = { enabled = false },
+    },
+  },
 }
