@@ -8,6 +8,18 @@ return {
       scroll = {
         enabled = false,
       },
+      picker = {
+        sources = {
+          files = {
+            args = {
+              "-t",
+              "f",
+              "-t",
+              "d",
+            },
+          },
+        },
+      },
     },
   },
 }
