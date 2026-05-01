@@ -5,3 +5,7 @@
 ### Sketchybar
 
 ![Sketchybar](./screenshots/sketchybar.png)
+
+### Neovim
+
+![Neovim](./screenshots/dashboard.png)
