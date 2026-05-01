@@ -6,3 +6,7 @@
 -- for example 10J will move the selected code 10 lines down.
 vim.keymap.set("v", "J", ":<C-u>execute \"'<,'>m '>+\" . v:count1<CR>gv=gv", { desc = "Move down" })
 vim.keymap.set("v", "K", ":<C-u>execute \"'<,'>m '<-\" . (v:count1 + 1)<CR>gv=gv", { desc = "Move up" })
+
+vim.keymap.set("n", "<leader>fc", function()
+  Snacks.picker.files({ cwd = "~/.dotfiles/nvim/.config/nvim/" })
+end, { desc = "Find Config (dotfiles)" })
