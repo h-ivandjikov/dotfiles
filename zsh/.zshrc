@@ -2,6 +2,9 @@
 autoload -Uz compinit
 compinit -u
 
+# Set Neovim as default editor
+export EDITOR="nvim"
+
 # Better autocompletions syntax
 zstyle ':completion:*' matcher-list \
   'm:{a-zA-Z}={A-Za-z}' \
