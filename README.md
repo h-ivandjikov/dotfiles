@@ -9,3 +9,7 @@
 ### Neovim
 
 ![Neovim](./screenshots/dashboard.png)
+
+### Full Workflow
+
+![Workflow](https://github.com/user-attachments/assets/3e401e42-dbba-4361-94fb-b901c7faed05)
