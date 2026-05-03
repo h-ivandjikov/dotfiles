@@ -120,7 +120,7 @@ outer.right = 8
 # '''
 
 ### Main shortcuts
-alt-enter = 'exec-and-forget open -a Ghostty'
+alt-enter = 'exec-and-forget /Applications/Ghostty.app/Contents/MacOS/ghostty'
 alt-f = 'exec-and-forget open -a Finder'
 alt-shift-f = 'fullscreen'
 alt-shift-b = 'exec-and-forget open -n -a "Brave Browser"'
