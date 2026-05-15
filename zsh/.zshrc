@@ -26,6 +26,9 @@ setopt HIST_FIND_NO_DUPS
 setopt INTERACTIVE_COMMENTS
 setopt EXTENDED_GLOB
 
+# Better ls
+alias ls="eza"
+
 # Better cd
 eval "$(zoxide init --cmd cd zsh)"
 
@@ -58,3 +61,7 @@ zinit light-mode for \
     zsh-users/zsh-autosuggestions
 
 ### End of Zinit's installer chunk
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH="$HOME/.go/bin:$PATH"
