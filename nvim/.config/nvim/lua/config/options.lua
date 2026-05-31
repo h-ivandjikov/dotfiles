@@ -4,3 +4,5 @@
 vim.opt.scrolloff = 999
 vim.opt.sidescrolloff = 30
 vim.opt.shiftwidth = 4
+
+vim.g.lazyvim_python_lsp = "ty"
