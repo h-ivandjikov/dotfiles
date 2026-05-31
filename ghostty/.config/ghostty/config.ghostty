@@ -19,3 +19,4 @@ window-vsync = true
 
 macos-titlebar-style = hidden
 macos-window-shadow = false
+macos-option-as-alt = true
