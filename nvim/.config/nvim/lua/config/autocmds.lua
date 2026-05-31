@@ -10,3 +10,11 @@
 -- This stops neovim from automatically commenting a new line when you are starting from a commented line.
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
+-- Force scrolloff to re-apply when switching windows or closing terminals
+vim.api.nvim_create_autocmd({ "WinEnter", "VimResized", "TermClose" }, {
+  group = vim.api.nvim_create_augroup("force_scrolloff", { clear = true }),
+  callback = function()
+    vim.opt.scrolloff = 999
+  end,
+})
