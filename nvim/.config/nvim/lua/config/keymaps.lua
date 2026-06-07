@@ -7,6 +7,9 @@
 vim.keymap.set("v", "J", ":<C-u>execute \"'<,'>m '>+\" . v:count1<CR>gv=gv", { desc = "Move down" })
 vim.keymap.set("v", "K", ":<C-u>execute \"'<,'>m '<-\" . (v:count1 + 1)<CR>gv=gv", { desc = "Move up" })
 
+-- This keymap searches for my config in my dotfiles directory, not the standard neovim config location
 vim.keymap.set("n", "<leader>fc", function()
   Snacks.picker.files({ cwd = "~/.dotfiles/nvim/.config/nvim/" })
 end, { desc = "Find Config (dotfiles)" })
+
+vim.keymap.set("n", "<C-\\>", "<C-^>", { desc = "Switch to alternate buffer" })
