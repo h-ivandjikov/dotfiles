@@ -83,9 +83,6 @@ sketchybar --add item clock center \
            --add item volume right \
            --set volume script="$PLUGIN_DIR/volume.sh" \
            --subscribe volume volume_change \
-           --add item battery right \
-           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change \
            --add item language right \
            --set language update_freq=1 icon= script="$PLUGIN_DIR/language.sh" \
            --add item separator right \
@@ -94,7 +91,13 @@ sketchybar --add item clock center \
            --add item ram right \
            --set ram icon= \
                      script='sketchybar --set $NAME label="$RAM_USED GB / $RAM_TOTAL GB"' \
-           --subscribe ram system_stats
+           --subscribe ram system_stats \
+           --add item vpn right \
+              --set vpn icon= \
+                        update_freq=5 \
+                        padding_right=300 \
+                        script="$PLUGIN_DIR/vpn.sh" \
+                        click_script="$PLUGIN_DIR/toggle_vpn.sh"
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
