@@ -1,0 +1,4 @@
+pollMillis=50
+delay=0
+focusDelay=0
+requireMouseStop=0
