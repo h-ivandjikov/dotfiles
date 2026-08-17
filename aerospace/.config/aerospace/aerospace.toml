@@ -135,8 +135,8 @@ alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left --boundaries all-monitors-outer-frame'
-alt-j = 'focus down --boundaries all-monitors-outer-frame'
-alt-k = 'focus up --boundaries all-monitors-outer-frame'
+alt-j = 'focus-monitor up'
+alt-k = 'focus-monitor down'
 alt-l = 'focus right --boundaries all-monitors-outer-frame'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
