@@ -72,7 +72,7 @@ preset = 'qwerty'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
-# - Constant:     gaps.outer.top = 8
+# - Constant:     gaps.outer.top = something
 # - Per monitor:  gaps.outer.top = [{ monitor.main = 16 }, { monitor."some-pattern" = 32 }, 24]
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
@@ -83,7 +83,7 @@ inner.horizontal = 12
 inner.vertical = 0
 outer.left = 8
 outer.bottom = 8
-outer.top = 48
+outer.top = 48        # Sketchybar gap
 outer.right = 8
 
 # Set workspace number 2 to external monitor
@@ -123,15 +123,16 @@ outer.right = 8
 # end tell'
 # '''
 
+
 ### Main shortcuts
 alt-enter = 'exec-and-forget /Applications/Ghostty.app/Contents/MacOS/ghostty'
 alt-f = 'exec-and-forget open -a Finder'
 alt-shift-f = 'fullscreen'
 alt-shift-b = 'exec-and-forget open -n -a "Brave Browser"'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
+ctrl-m = 'exec-and-forget ~/.config/aerospace/toggle_gap.sh'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left --boundaries all-monitors-outer-frame'
