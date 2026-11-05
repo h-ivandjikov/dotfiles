@@ -1,10 +1,41 @@
 return {
-	"mason-org/mason-lspconfig.nvim",
-	opts = {
-		ensure_installed = { "lua_ls", "ruff", "ty" },
-	},
+	"WhoIsSethDaniel/mason-tool-installer.nvim",
 	dependencies = {
 		{ "mason-org/mason.nvim", opts = {} },
 		"neovim/nvim-lspconfig",
+		{ "mason-org/mason-lspconfig.nvim", opts = {} },
+		"b0o/SchemaStore.nvim",
+	},
+	opts = {
+		ensure_installed = {
+			"lua-language-server",
+			"ty",
+			"ruff",
+			"tsgo",
+			"biome",
+			"gopls",
+
+			"lemminx",
+			"sqls",
+			"taplo",
+			"json-lsp",
+			"yaml-language-server",
+			"dockerfile-language-server",
+			"docker-compose-language-service",
+			"bash-language-server",
+			"marksman",
+			"harper-ls",
+
+			"stylua",
+			"gofumpt",
+			"goimports",
+			"golangci-lint",
+			"sqruff",
+			"xmlformatter",
+			"hadolint",
+			"shfmt",
+			"shellcheck",
+			"yamlfmt",
+		},
 	},
 }

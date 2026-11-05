@@ -4,6 +4,14 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "ruff" },
+			typescript = { "biome", "prettierd", stop_after_first = true },
+			javascript = { "biome", "prettierd", stop_after_first = true },
+			json = { "biome", "jq", stop_after_first = true },
+			toml = { "taplo" },
+			xml = { "xml_formatter" },
+			sql = { "sqruff" },
+			yaml = { "yamlfmt" },
+			sh = { "shfmt" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
