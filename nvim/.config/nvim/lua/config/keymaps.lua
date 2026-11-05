@@ -1,15 +1,41 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+vim.g.mapleader = " "
+local map = vim.keymap.set
+-- when searching for keyword with '/', pressing ESC in normal mode will remove highlighted words
+map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- This keymap makes it so you can move lines of code while in visual mode to specific line numbers,
--- for example 10J will move the selected code 10 lines down.
-vim.keymap.set("v", "J", ":<C-u>execute \"'<,'>m '>+\" . v:count1<CR>gv=gv", { desc = "Move down" })
-vim.keymap.set("v", "K", ":<C-u>execute \"'<,'>m '<-\" . (v:count1 + 1)<CR>gv=gv", { desc = "Move up" })
+-- ctrl + hjkl navigation between buffers
+map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window" })
+map("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window" })
+map("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window" })
+map("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window" })
 
--- This keymap searches for my config in my dotfiles directory, not the standard neovim config location
-vim.keymap.set("n", "<leader>fc", function()
-  Snacks.picker.files({ cwd = "~/.dotfiles/nvim/.config/nvim/" })
-end, { desc = "Find Config (dotfiles)" })
+map({ "n", "x" }, "c", '"_c', {
+	desc = "Change without yanking",
+})
 
-vim.keymap.set("n", "<C-\\>", "<C-^>", { desc = "Switch to alternate buffer" })
+map("n", "<C-_>", "<cmd>suspend<CR>", { desc = "Suspend Neovim" })
+
+-- grep for files / words
+map("n", "<leader><leader>", function()
+	Snacks.picker.files()
+end, { desc = "Find Files" })
+map("n", "<leader>/", function()
+	Snacks.picker.grep()
+end, { desc = "Live Grep" })
+map("n", "<leader>fb", function()
+	Snacks.picker.buffers()
+end, { desc = "Find Buffers" })
+
+-- toggle file picker
+map("n", "<leader>e", function()
+	if vim.bo.filetype == "oil" then
+		require("oil").close()
+	else
+		require("oil").open()
+	end
+end, { desc = "Toggle Oil" })
+
+-- open config
+map("n", "<leader>fc", function()
+	require("oil").open(vim.fn.stdpath("config"))
+end, { desc = "Open Neovim Config" })
