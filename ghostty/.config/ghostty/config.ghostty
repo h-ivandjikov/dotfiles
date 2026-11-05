@@ -1,9 +1,9 @@
-theme = TokyoNight Storm
+theme = One Double Dark
 font-family = "FiraCode Nerd Font Mono"
 font-size = 17
 font-feature = "zero"
 
-background-opacity = 0.85
+background-opacity = 1
 background-blur = 30
 
 window-padding-x = 12
