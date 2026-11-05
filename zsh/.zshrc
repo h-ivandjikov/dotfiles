@@ -15,8 +15,21 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # Enable vim mode in shell
 bindkey -v
 
+# Adds CTRL + / keybind to send "fg" command
+send-fg() {
+    BUFFER="fg"
+    zle accept-line
+}
+zle -N send-fg
+
+bindkey -M viins '^_' send-fg
+bindkey -M vicmd '^_' send-fg
+
 # Neovim alias
 alias n="nvim"
+
+# Reload shell alias
+alias reload="source ~/.zshrc"
 
 # Options
 setopt AUTOCD
