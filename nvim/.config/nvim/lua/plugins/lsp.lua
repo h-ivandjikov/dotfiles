@@ -11,9 +11,11 @@ return {
 			"lua-language-server",
 			"ty",
 			"ruff",
-			"tsgo",
+			"tsc",
 			"biome",
 			"gopls",
+			"css-lsp",
+			"tailwindcss-language-server",
 
 			"lemminx",
 			"sqls",
@@ -25,6 +27,7 @@ return {
 			"bash-language-server",
 			"marksman",
 
+			"prettierd",
 			"stylua",
 			"gofumpt",
 			"goimports",
