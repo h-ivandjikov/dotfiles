@@ -24,7 +24,6 @@ return {
 			"docker-compose-language-service",
 			"bash-language-server",
 			"marksman",
-			"harper-ls",
 
 			"stylua",
 			"gofumpt",
