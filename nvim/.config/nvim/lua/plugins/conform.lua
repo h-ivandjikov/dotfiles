@@ -12,6 +12,7 @@ return {
 			sql = { "sqruff" },
 			yaml = { "yamlfmt" },
 			sh = { "shfmt" },
+			html = { "prettierd" },
 		},
 		format_on_save = {
 			timeout_ms = 500,
