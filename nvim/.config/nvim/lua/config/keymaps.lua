@@ -22,7 +22,7 @@ end, { desc = "Find Files" })
 map("n", "<leader>/", function()
 	Snacks.picker.grep()
 end, { desc = "Live Grep" })
-map("n", "<leader>fb", function()
+map("n", "<leader>b", function()
 	Snacks.picker.buffers()
 end, { desc = "Find Buffers" })
 
@@ -34,6 +34,15 @@ map("n", "<leader>e", function()
 		require("oil").open()
 	end
 end, { desc = "Toggle Oil" })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "oil",
+	callback = function(args)
+		vim.keymap.set("n", "<BS>", function()
+			require("oil.actions").parent.callback()
+		end, { buffer = args.buf, desc = "Open parent directory" })
+	end,
+})
 
 -- open config
 map("n", "<leader>fc", function()
