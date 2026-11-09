@@ -8,7 +8,7 @@ return {
 			javascript = { "biome", "prettierd", stop_after_first = true },
 			json = { "biome", "jq", stop_after_first = true },
 			toml = { "taplo" },
-			xml = { "xml_formatter" },
+			xml = { "xmlformatter" },
 			sql = { "sqruff" },
 			yaml = { "yamlfmt" },
 			sh = { "shfmt" },
